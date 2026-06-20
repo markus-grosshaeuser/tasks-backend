@@ -1,0 +1,23 @@
+services:
+    db:
+        container_name: tasks_db
+        build:
+            dockerfile_inline: FROM postgres:18-alpine
+        restart: no
+        networks:
+            - tasks_net
+        shm_size: 128mb
+        env_file: "database.env"
+        ports:
+            - 5432:5432
+        healthcheck:
+            test: ["CMD-SHELL", "sh -c 'pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}'"]
+            interval: 10s
+            timeout: 5s
+            retries: 5
+            start_period: 5s
+
+
+networks:
+  tasks_net:
+    driver: bridge
