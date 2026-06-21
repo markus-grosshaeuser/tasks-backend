@@ -1,6 +1,6 @@
 # Tasks Backend
 
-![](https://github.com/markus-grosshaeuser/badges/blob/main/versions/version_1_0_0.svg)
+![](https://github.com/markus-grosshaeuser/badges/blob/main/versions/version_1_0_1.svg)
 ![](https://github.com/markus-grosshaeuser/badges/blob/main/languages/Java-25.svg)
 ![](https://github.com/markus-grosshaeuser/badges/blob/main/frameworks/Spring_Boot-v4.0.6.svg)
 ![](https://github.com/markus-grosshaeuser/badges/blob/main/tools/Maven-v3.9.16.svg)

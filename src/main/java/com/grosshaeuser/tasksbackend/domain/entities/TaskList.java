@@ -40,7 +40,7 @@ public class TaskList {
     private List<Task> tasks = new ArrayList<>();
 
     @CreatedDate
-    @Column(name = "created_at", nullable = false)
+    @Column(name = "created_at", nullable = false, updatable = false)
     private Instant createdAt;
 
     @LastModifiedDate

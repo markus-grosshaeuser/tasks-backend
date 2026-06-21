@@ -23,7 +23,7 @@ public class TaskListServiceImpl implements TaskListService {
 
     @Override
     public List<TaskList> getAllTaskLists() {
-        return taskListRepo.findAll();
+        return taskListRepo.findAllByOrderByCreatedAtDesc();
     }
 
     @Override

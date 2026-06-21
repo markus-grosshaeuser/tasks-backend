@@ -42,6 +42,8 @@ public class TaskListMapperImpl implements TaskListMapper {
                 .title(taskList.getTitle())
                 .description(taskList.getDescription())
                 .completionRatio(calculateCompletionRatio(taskList.getTasks()))
+                .createdAt(taskList.getCreatedAt())
+                .updatedAt(taskList.getUpdatedAt())
                 .build();
     }
 

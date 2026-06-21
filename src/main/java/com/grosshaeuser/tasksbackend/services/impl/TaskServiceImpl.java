@@ -28,7 +28,7 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public List<Task> getAllTasksByTaskListId(UUID taskListId) {
-        return taskRepo.findAllByTaskListId(taskListId);
+        return taskRepo.findAllByTaskListIdOrderByPositionInListAsc(taskListId);
     }
 
     @Override

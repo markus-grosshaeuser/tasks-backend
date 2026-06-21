@@ -76,13 +76,13 @@ public class TaskListControllerTest {
                 .expectStatus().isOk()
                 .expectBody()
                 .jsonPath("$.length()").isEqualTo(2)
-                .jsonPath("$[0].id").isEqualTo(workTaskList.getId().toString())
-                .jsonPath("$[0].title").isEqualTo("Work")
-                .jsonPath("$[0].description").isEqualTo("Tasks related to work")
+                .jsonPath("$[0].id").isEqualTo(privateTaskList.getId().toString())
+                .jsonPath("$[0].title").isEqualTo("Private")
+                .jsonPath("$[0].description").isEqualTo("Private tasks")
                 .jsonPath("$[0].completionRatio").isEqualTo(0.0)
-                .jsonPath("$[1].id").isEqualTo(privateTaskList.getId().toString())
-                .jsonPath("$[1].title").isEqualTo("Private")
-                .jsonPath("$[1].description").isEqualTo("Private tasks")
+                .jsonPath("$[1].id").isEqualTo(workTaskList.getId().toString())
+                .jsonPath("$[1].title").isEqualTo("Work")
+                .jsonPath("$[1].description").isEqualTo("Tasks related to work")
                 .jsonPath("$[1].completionRatio").isEqualTo(0.0);
     }
 

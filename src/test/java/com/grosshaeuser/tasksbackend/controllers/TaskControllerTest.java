@@ -170,7 +170,7 @@ public class TaskControllerTest {
                 .jsonPath("$.createdAt").exists()
                 .jsonPath("$.updatedAt").exists();
 
-        assertThat(taskRepo.findAllByTaskListId(taskList.getId())).hasSize(1);
+        assertThat(taskRepo.findAllByTaskListIdOrderByPositionInListAsc(taskList.getId())).hasSize(1);
     }
 
     @Test
@@ -210,7 +210,7 @@ public class TaskControllerTest {
                 .exchange()
                 .expectStatus().isBadRequest();
 
-        assertThat(taskRepo.findAllByTaskListId(taskList.getId())).isEmpty();
+        assertThat(taskRepo.findAllByTaskListIdOrderByPositionInListAsc(taskList.getId())).isEmpty();
     }
 
     @Test
