@@ -2,7 +2,7 @@ services:
     db:
         container_name: tasks_db
         build:
-            dockerfile_inline: FROM postgres:18-alpine
+            dockerfile_inline: FROM postgres:18.4-alpine
         restart: no
         networks:
             - tasks_net

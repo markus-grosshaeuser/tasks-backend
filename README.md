@@ -51,6 +51,12 @@ You do not need to install Maven manually because the project includes the Maven
 
 ## Getting Started
 
+### A word about the docker-compose file
+The docker-compose file included in this subproject is used to start a database for __development__ purposes.
+
+To run the whole application in a production environment, use the docker-compose file included in the project root directory.
+
+
 ### 1. Clone the repository
 
 ```bash 
